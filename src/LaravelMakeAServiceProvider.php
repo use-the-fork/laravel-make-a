@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace UseTheFork\LaravelMakeA;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use UseTheFork\LaravelMakeA\Commands\LaravelMakeACommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class LaravelMakeAServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('laravel-make-a')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_laravel-make-a_table')
+            ->hasCommand(LaravelMakeACommand::class);
     }
 }
